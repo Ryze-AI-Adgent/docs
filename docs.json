@@ -1,53 +1,64 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Ryze AI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#242424",
+    "light": "#F5F5F5",
+    "dark": "#1A1A1A"
   },
-  "favicon": "/favicon.svg",
+  "fonts": {
+    "family": "Plus Jakarta Sans"
+  },
+  "favicon": "/favicon.ico",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "search": {
+    "prompt": "Search Ryze docs..."
+  },
   "navigation": {
-    "pages": [
+    "groups": [
       {
         "group": "Getting Started",
         "pages": [
-          "index",
-          "quickstart"
+          "overview",
+          "what-ryze-does"
+        ]
+      },
+      {
+        "group": "Connect",
+        "pages": [
+          "connect/ad-accounts",
+          "connect/claude",
+          "connect/faq"
+        ]
+      },
+      {
+        "group": "Billing",
+        "pages": [
+          "billing/overview",
+          "billing/faq"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "help/contact"
         ]
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+      "anchors": []
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://app.get-ryze.ai/integrations"
     }
   },
   "contextual": {
@@ -55,18 +66,10 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

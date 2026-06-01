@@ -1,0 +1,70 @@
+---
+title: "FAQ"
+description: "Common questions about connecting, accounts, platforms, and your account"
+---
+
+## Connecting & Claude
+
+<AccordionGroup>
+  <Accordion title="The connector shows 'server is disconnected'">
+    Remove the connector in Claude, then re-add it with the URL `https://mcp.get-ryze.ai/mcp/unified/`. If it still shows disconnected, [contact support](/help/contact) with the email on your Ryze account and roughly when it happened — we track timeout errors and can look into yours.
+  </Accordion>
+  <Accordion title="It works in Claude Desktop but not on the web">
+    This is expected. **Claude Desktop** is the most reliable environment today; the web connector can time out. If you hit timeouts on claude.ai, switch to Desktop.
+  </Accordion>
+  <Accordion title="The setup screen doesn't match the steps">
+    Claude's UI changes faster than screenshots. [Send us a screenshot](/help/contact) of where you're stuck (or describe what you see vs. the guide) and we'll reply with the current steps.
+  </Accordion>
+  <Accordion title="I didn't receive my connection key by email">
+    You don't need to wait for an email — generate one yourself from the **Ryze MCP (Claude Connector)** section at [app.get-ryze.ai/integrations](https://app.get-ryze.ai/integrations). If you'd still like us to look into it, [contact support](/help/contact) with the email on your Ryze account.
+  </Accordion>
+  <Accordion title="How do I confirm the connection is working?">
+    In Claude, open **Customize → Connectors** and select **Ryze AI** — a connected connector lists its available tools. You can also ask Claude to "list my ad accounts"; if it returns them, you're connected. Full walkthrough: [Connect to Claude](/connect/claude).
+  </Accordion>
+</AccordionGroup>
+
+## Accounts & platforms
+
+<AccordionGroup>
+  <Accordion title="Some Meta accounts aren't selectable in Claude">
+    The connector may have reconnected with a narrower permission scope than the web app. [Contact support](/help/contact) with the email on your Ryze account and which accounts are missing, and we'll resync the permissions.
+  </Accordion>
+  <Accordion title="A new Google Ads sub-account shows in the dashboard but not in Claude">
+    New sub-accounts can lag the connector's account list. Reconnect the connector first; if it's still missing, [contact support](/help/contact) with the email on your Ryze account and the customer ID, and we'll force a re-discovery.
+  </Accordion>
+  <Accordion title="I reconnected but my account list didn't refresh">
+    [Contact support](/help/contact) with the email on your Ryze account and the accounts you expect to see, and we'll trigger a re-discovery.
+  </Accordion>
+  <Accordion title="Can I connect a Google Ads Manager (MCC) account?">
+    Yes. Connecting the manager pulls in its child accounts through the hierarchy. After connecting, ask Claude to "list my ad accounts" to confirm they all came through.
+  </Accordion>
+  <Accordion title="Can I connect multiple ad accounts or multiple platforms?">
+    Yes — you can connect multiple ad accounts (including different regions, e.g. UK and US) and multiple platforms (Google, Meta, TikTok and more) to a single Ryze account. [Contact support](/help/contact) if you'd like us to confirm the steps for your setup.
+  </Accordion>
+  <Accordion title="Shopify says 'No Ryze account onboarded for [domain]'">
+    Shopify sometimes hands us an internal alias (e.g. `tq72e-jx.myshopify.com`) instead of your public store domain. The integration test passes but **Connect** fails. [Contact support](/help/contact) with the email on your Ryze account and your public store domain, and we'll map it correctly.
+  </Accordion>
+  <Accordion title="Can I connect multiple Shopify stores?">
+    Yes. [Contact support](/help/contact) with the email on your Ryze account and how many stores you're running, and we'll confirm the best setup.
+  </Accordion>
+</AccordionGroup>
+
+## Platform errors
+
+<AccordionGroup>
+  <Accordion title="Reddit Ads returns a 400 on create_campaign">
+    Reads work but creating a campaign fails — that looks like a connector issue. [Contact support](/help/contact) with the email on your Ryze account and the exact fields you're sending, so we can reproduce and fix it.
+  </Accordion>
+  <Accordion title="Microsoft Ads fails with a bingads library error">
+    We shipped a fix for this. If you're still hitting it, [contact support](/help/contact) with the email on your Ryze account and we'll confirm you're on the fixed version.
+  </Accordion>
+  <Accordion title="TikTok connection is broken / create errors">
+    We fixed a batch of TikTok create errors. If it's still acting up, [contact support](/help/contact) with the email on your Ryze account and the exact error or tool, and we'll confirm or escalate.
+  </Accordion>
+  <Accordion title="Performance Max shows 'below-minimum' asset groups">
+    We shipped a fix that populates Performance Max asset groups in one atomic batch. If you still see it, [contact support](/help/contact) with the email on your Ryze account and the campaign.
+  </Accordion>
+  <Accordion title="My Google Ads stopped converting after I started using Ryze">
+    Ryze has no code path that disables conversion tracking, so this needs a look at your specific tracking and campaign settings. [Contact support](/help/contact) with the email on your Ryze account and we'll dig in as a priority.
+  </Accordion>
+</AccordionGroup>

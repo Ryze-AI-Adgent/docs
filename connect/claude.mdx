@@ -1,0 +1,61 @@
+---
+title: "Connect to Claude"
+description: "Set up the Ryze connector in Claude and verify it works"
+---
+
+This connects Ryze to Claude so you can list accounts, pull reports, and make changes from chat. It takes about 30 seconds.
+
+<Note>
+Use **Claude Desktop** for the most reliable connection. The web version (claude.ai) works too, but it can time out on slower connections — if something stalls, switch to Desktop.
+</Note>
+
+## Step 1 — Generate your connection key
+
+In your Ryze dashboard, open the **Ryze MCP (Claude Connector)** section at [app.get-ryze.ai/integrations](https://app.get-ryze.ai/integrations). Under **Connection keys**, name the key (e.g. "Claude Desktop"), click **Generate Key**, and copy it.
+
+<Frame>
+  <img src="/images/connection-key.png" alt="Generate a connection key in the Ryze dashboard" />
+</Frame>
+
+## Step 2 — Add the connector in Claude
+
+<Steps>
+  <Step title="Open Settings">
+    Click your account menu (bottom-left) and choose **Settings**.
+    <Frame>
+      <img src="/images/claude-open-settings.png" alt="Open Settings from the Claude account menu" />
+    </Frame>
+  </Step>
+  <Step title="Go to Connectors → Customize">
+    Open **Connectors**. They now live under **Customize** — click that link.
+    <Frame>
+      <img src="/images/claude-connectors-moved.png" alt="Connectors have moved to Customize" />
+    </Frame>
+  </Step>
+  <Step title="Add a custom connector">
+    In **Customize → Connectors**, click the **+** to add one.
+    <Frame>
+      <img src="/images/claude-add-connector.png" alt="Add a custom connector with the plus button" />
+    </Frame>
+  </Step>
+  <Step title="Enter the details">
+    Name it **Ryze AI** and paste the URL `https://mcp.get-ryze.ai/mcp/unified/`. Expand **Advanced settings** and paste your **connection key** into the **OAuth Client ID** field, then click **Add**.
+    <Frame>
+      <img src="/images/claude-connector-dialog.png" alt="Add custom connector dialog with URL and OAuth Client ID field" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Step 3 — Verify it works
+
+Open **Customize → Connectors** and select **Ryze AI**. A connected connector shows the Ryze URL and a long list of available tools.
+
+<Frame>
+  <img src="/images/connector-connected.png" alt="Ryze AI connector connected in Claude with its tools listed" />
+</Frame>
+
+You can also test it in chat — ask Claude:
+
+> list my ad accounts
+
+If it returns your accounts, you're done. If it stalls, see the [FAQ](/connect/faq).
