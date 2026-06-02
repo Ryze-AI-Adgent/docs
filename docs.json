@@ -57,6 +57,14 @@
         ]
       },
       {
+        "group": "Security",
+        "pages": [
+          "security/overview",
+          "security/data-storage",
+          "security/data-processing"
+        ]
+      },
+      {
         "group": "Help",
         "pages": [
           "help/contact"
