@@ -76,7 +76,12 @@
     }
   },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Status",
+        "href": "https://status.get-ryze.ai"
+      }
+    ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
